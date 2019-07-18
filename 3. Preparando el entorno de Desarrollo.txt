@@ -15,3 +15,11 @@ Para iniciar Postgresql sigue estos pasos
 Si lo instalaste con Chocolatey te va a asignar una contraseña por default la cual es Postgres1234
 Debes abrir el .exe llamado pgAdmin una ves dentro le das clic derecho dentro de la base de datos y le pones Connect.
 Te va a pedir un password, pones Postgres1234 y listo ya iniciaste tu instancia
+
+Cómo instalar Ansible en macOS
+Otra herramienta que vamos a utilizar es Ansible, que nos sirve para automatizar tareas de infraestructura. La vamos a utilizar para crear scripts de manera automatizada.
+
+Para instalar Ansible vamos a utilizar Homebrew con el comando:
+$ brew install ansible
+
+Por otro lado vamos a descargar Vagrant, que nos permite tener ambientes de desarrollo o servidores virtuales para hacer primero un deploy local antes de hacer despliegue en la nube.
