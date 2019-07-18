@@ -32,3 +32,16 @@ Libuv: Librería encargada de manejar el event loop en Node (Loop de ejecución 
 OpenSSL: Para comunicación segura.
 Zlib: Encriptación.
 Http_paser: Para hacer el parseo de el protocolo http.
+
+Características de la plataforma Node.js
+Networking y entrada y salida: Más de 1/4 del core de Node.js está dedicado a Networking.
+Node.js está especialmente diseñado para tipos de trabajo de entrada y salida.
+
+Node.js es modular. npm es el registro de paquetes OpenSource más grande del mundo.
+El sistema modular de Node.js resuelve los problemas dependency hell.
+
+La característica principal de Node.js es que podemos trabajar de manera asíncrona y orientada a objetos.
+
+Node.js es muy bueno para aplicaciones en tiempo real o para orquestación de recursos entre múltiples aplicaciones.
+
+Node.js no es bueno para computaciones que requieren uso de la CPU, ni para desarrollar aplicaciones como Systems programming.
