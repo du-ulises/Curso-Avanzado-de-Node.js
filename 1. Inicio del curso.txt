@@ -1,0 +1,6 @@
+¿Qué vamos a construir en el curso avanzado de Node.js?
+Bienvenidos al Curso Avanzado de Node.js.
+Vamos a construir una plataforma de** Io**T, enfocándonos en Real Time. Utilizaremos las nuevas características de JavaScript que vienen en ECMAScript 2016 y vamos a trabajar con Postgres como base de datos.
+Para tomar este curso necesitas conocimientos básicos de JavaScript.
+Si tienes conocimientos de Node.js va a ser mucho mejor. En cuanto a requisitos técnicos solo debes tener tu computador y un buen manejo de la terminal.
+Te invitamos a compartir tu progreso en el sistema de discusiones.
