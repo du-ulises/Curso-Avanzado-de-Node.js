@@ -1,0 +1,17 @@
+Cómo instalar PostgreSQL y Redis
+Para hacerlo de forma similar solo cambiando el brew por choco en windows installen Chocolatey 
+Despues que lo installlan no olviden correr su CMD o el terminal de su preferencia como Hyper como Administrador y ponen los comandos tal cual los escribe Julian pero remplazando brew por choco
+choco install redis-64
+choco install postgresql
+
+Después los pasos que describe @j2rojasr abajo para iniciar redis
+
+Abre la terminal de Windows (1) y escribe "redis-server"
+Abre otra terminal de Windows (2) y escribe "redis-cli"
+Luego, en la terminal (2) escribe “set name MiNombre” y luego “ping”. Debes obtener una respuesta "pong"
+
+
+Para iniciar Postgresql sigue estos pasos
+Si lo instalaste con Chocolatey te va a asignar una contraseña por default la cual es Postgres1234
+Debes abrir el .exe llamado pgAdmin una ves dentro le das clic derecho dentro de la base de datos y le pones Connect.
+Te va a pedir un password, pones Postgres1234 y listo ya iniciaste tu instancia
