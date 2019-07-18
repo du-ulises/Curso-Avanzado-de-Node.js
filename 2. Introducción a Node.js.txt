@@ -1,0 +1,34 @@
+¿Qué es Node.js?
+Node es una plataforma OpenSource para desarrollar aplicaciones, que está enfocada en tiempo real. Es similar a la máquina virtual de Java.
+
+Node es muy útil para aplicaciones que tienen alta concurrencia. Utiliza JavaScript como lenguaje de programación y patrones de programación asíncronos y orientados a objetos.
+
+¿Por qué decimos que Node.js es una plataforma simple?
+
+Es una librería estándar es donde el código va a morir. Mantener una plataforma estándar actualizada puede ser un problema.
+npm y la modularidad de Node abre un ecosistema de trabajo muy grande.
+El modelo de trabajo Open Source beneficia mucho a la plataforma.
+Node existe gracias a un componente principal que se llama V8, que es el que nos permite utilizar JavaScript del lado del servidor.
+
+Respuesta a:
+¿Qué es Node.js?
+¿Qué es Node?
+Node es una entorno de ejecución multiplataforma de código abierto usado para desarrollar aplicaciones enfocadas en tiempo real. Utiliza JavaScript como lenguaje de programación, patrones de programación asíncronos y orientados a eventos (programas en los cuales va determinado el flujo de ejecución por los sucesos que ocurran en el sistema). Similar a la máquina virtual de Java de Oracle o al framework .NET de Microsoft.
+
+Node es muy útil para desarrollar aplicaciones que necesitan alta concurrencia, centradas en la red (servidores web, servidores para resolver dns, etc.), modulares, etc.
+
+¿Por qué decimos que Node es una plataforma simple?
+
+Una librería estándar es donde el código va a morir. Plataformas, como por ejemplo Go, tienen una librería estándar muy grande, esto hace que mantener el core de la plataforma actualizado se les haga muy complejo a los desarrolladores core de la plataforma. La filosofía de Node es mantener el core liviano (con lo suficiente para trabajar), y que todo el crecimiento de la plataforma se haga en el userland (parte de la plataforma que no hace parte del core, es decir, todos los módulos externos al core).
+Npm es el contenedor de todos los módulos, por lo cual se puede decir que npm es el userland de Node.
+El modelo de trabajo de código abierto beneficia mucho a la plataforma pues los módulos normalmente ubicados en el userland son mantenidos por empresas o individuos de la comunidad que apoyan la plataforma.
+Node existe gracias a un componente principal que se llama V8 (Máquina virtual de JS usada en el navegador Google Chrome), que es el que nos permite utilizar JavaScript del lado del servidor.
+La arquitectura de Node
+
+Node.js core API: Es el conjunto de librerías escritas en Javascript con las cuales interactuamos.
+Node.js bindings: Permite comunicar la capa escrita en Javascript con las librerías de bajo nivel.
+V8 Javascript engine: Máquina virtual de Javascript, es el componente principal de Node que nos permite ejecutar Javascript fuera del navegador.
+Libuv: Librería encargada de manejar el event loop en Node (Loop de ejecución de tareas asíncronas), también se encarga de las operaciones de red y operaciones de entrada y salida del sistema de archivos.
+OpenSSL: Para comunicación segura.
+Zlib: Encriptación.
+Http_paser: Para hacer el parseo de el protocolo http.
