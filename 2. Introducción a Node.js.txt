@@ -45,3 +45,13 @@ La característica principal de Node.js es que podemos trabajar de manera asínc
 Node.js es muy bueno para aplicaciones en tiempo real o para orquestación de recursos entre múltiples aplicaciones.
 
 Node.js no es bueno para computaciones que requieren uso de la CPU, ni para desarrollar aplicaciones como Systems programming.
+
+¿Qué tipo de aplicaciones podemos desarrollar con Node.js?
+Node.js es el proyecto open source con el crecimiento más rápido del mundo en este momento. Muchas empresas están empezando no solo a utilizarlo sino a contribuir y patrocinar y tienen empleados dedicados a que aporten al proyecto y eso es lo que permite que tenga un crecimiento tan grande.
+
+¿Qué tipo de aplicaciones podemos desarrollar?
+
+- Aplicaciones de escritorio.
+- Dispositivos embebidos.
+- Servidores web.
+- Aplicaciones móviles: hace poco anunciaron el soporte para Android.
