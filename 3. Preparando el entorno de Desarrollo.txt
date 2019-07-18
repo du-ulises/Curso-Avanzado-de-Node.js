@@ -16,24 +16,30 @@ Si lo instalaste con Chocolatey te va a asignar una contraseña por default la c
 Debes abrir el .exe llamado pgAdmin una ves dentro le das clic derecho dentro de la base de datos y le pones Connect.
 Te va a pedir un password, pones Postgres1234 y listo ya iniciaste tu instancia
 
+Para instalar Postgres en distribuciones linux basadas en Debian:
+
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+Installing Redis
+The Redis packages are available under the default apt repository. For the installation of Redis on an Ubuntu VPS. Run below command from the terminal to install Redis on your machine:
+
+sudo apt-get install redis-server
+Next is to enable Redis to start on system boot. Also restart Redis service once.
+
+sudo systemctl enable redis-server.service
+
 Instalación de Ansible para Ubuntu
-
 sudo apt-add-repository ppa:ansible/ansible
-
 sudo apt-get update
-
 sudo apt-get install ansible
 
 para comprobar la version de Ansible
-
 ansible --version
+
 Para instalar Vagrant en la consola colocar estos comandos
-
 apt-get install virtualbox
-
 apt-get install vagrant
 
-Cómo instalar Ansible en macOS
 Otra herramienta que vamos a utilizar es Ansible, que nos sirve para automatizar tareas de infraestructura. La vamos a utilizar para crear scripts de manera automatizada.
 
 Para instalar Ansible vamos a utilizar Homebrew con el comando:
