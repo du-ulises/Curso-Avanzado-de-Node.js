@@ -1,0 +1,22 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diego-Ulises/Curso-Avanzado-de-Node.js.git"
+  },
+  "author": "Diego Ulises Martínez Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diego-Ulises/Curso-Avanzado-de-Node.js/issues"
+  },
+  "homepage": "https://github.com/Diego-Ulises/Curso-Avanzado-de-Node.js#readme",
+  "devDependencies": {
+    "standard": "^13.0.2"
+  }
+}
