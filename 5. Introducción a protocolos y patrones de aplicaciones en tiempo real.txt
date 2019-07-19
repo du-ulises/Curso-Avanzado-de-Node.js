@@ -1,0 +1,20 @@
+Cómo funciona el modelo Pub/Sub en MQTT y Web Sockets
+MQTT es un servicio de publicación/suscripción TCP/IP sencillo y sumamente ligero. Se basa en el principio cliente/servidor.
+
+El servidor, llamado BROKER, recopila los datos que los PUBLISHERS (los objetos comunicantes) le transmiten. Determinados datos recopilados por el BROKER se enviarán a determinados PUBLISHERS que previamente así se lo hayan solicitado al BROKER.
+
+El principio de intercambio se parece mucho al de Twitter. Los PUBLISHERS envían los mensajes a un canal llamado TOPIC. Los SUBSCRIBERS (suscriptores) pueden leer esos mensajes. Los TOPICS (o canales de información) pueden estar distribuidos jerárquicamente de forma que se puedan seleccionar exactamente las informaciones que se desean.
+
+Los mensajes enviados por los objetos comunicantes pueden ser de todo tipo pero no pueden superar los 256 Mb.
+
+QoS
+
+El MQTT lleva integrada en modo nativo la noción de QoS (Quality of Service, calidad de servicio). En efecto, el PUBLISHER tiene la posibilidad de definir la calidad de su mensaje.
+
+Hay tres niveles posibles:
+
+Un mensaje de QoS nivel 0 at most once se entregará como mucho una vez. Eso significa que el mensaje se envía sin garantías de recepción (el BROKER no informa al remitente de que ha recibido el mensaje).
+
+Un mensaje de QoS nivel 1 at least once se entregará al menos una vez. El cliente lo transmitirá varias veces si es necesario, hasta que el BROKER le confirme que lo ha enviado a la red.
+
+Un mensaje de QoS nivel 2 exactly once será obligatoriamente guardado por el emisor, que lo transmitirá siempre que el receptor no confirme su envío a la red. La principal diferencia radica en que el emisor utiliza una fase de reconocimiento más sofisticada con el BROKER para evitar la duplicación de los mensajes (más lento pero más seguro).
