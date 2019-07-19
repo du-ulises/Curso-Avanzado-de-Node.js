@@ -1,0 +1,10 @@
+Estructura básica de un módulo de Node.js
+Para empezar con el proyecto vamos a crear un módulo de Node.js, con sus respectivas pruebas unitarias. El módulo de Persistencia en Bases de Datos.
+
+Vamos a crear el directorio del proyecto y vamos a utilizar un patrón de mono repo, donde tenemos un único repositorio de Git y varios proyectos adentro.
+
+Un módulo de Node por lo general tiene un archivo que se llama package.json, que tiene la metadata del módulo. Este archivo se puede crear a mano o utilizando npm con una herramienta que nos permite crearlo automáticamente.
+
+Para empezar a implementar nuestro módulo creamos el archivo index.js y nos vamos a Visual Studio Code, donde podemos ver nuestros archivos y empezar a trabajar con ellos. Una buena práctica es crear el archivo README.md con instrucciones de instalación y cómo contribuir al proyecto. Recuerda que este es el archivo de documentación de tu proyecto.
+
+Como otra buena práctica utilizaremos JavaScript en modo estricto, para empezar a definir la forma básica del módulo. La forma de escribir el objeto que utilizamos en el código es de ECMAScript 2016.
