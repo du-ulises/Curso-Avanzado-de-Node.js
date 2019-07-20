@@ -21,3 +21,16 @@ Sequelize es un modelo de programación de mapeo de objeto-relacional basado en 
 Dos tipos de objetos: modelos nativos de sequelize y servicios.
 
 Singleton es un objeto que solo tiene una instancia. Cada vez que llamemos a una función no va a crear múltiples instancias.
+
+Implementación de script de inicialización de base de datos
+
+sudo -u postgres -i
+psql postgres
+CREATE ROLE platzi WITH LOGIN PASSWORD 'platzi';
+CREATE DATABASE platziverse;
+GRANT ALL PRIVILEGES ON DATABASE platziverse TO platzi;
+\quits
+exit
+
+npm i debug --save
+
