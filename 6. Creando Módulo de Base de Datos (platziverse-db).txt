@@ -14,3 +14,10 @@ Lo primero que tenemos que hacer es definir las entidades de las bases de datos 
 
 El Agente va a conectarse al servidor en tiempo real y cada cierto tiempo va a reportar una métrica.
 La Métrica es cualquier valor que tiene un tipo, que va a ser almacenado en la base de datos.
+
+Implementación de modelos con sequelize
+Sequelize es un modelo de programación de mapeo de objeto-relacional basado en promesas, para Node.js.
+
+Dos tipos de objetos: modelos nativos de sequelize y servicios.
+
+Singleton es un objeto que solo tiene una instancia. Cada vez que llamemos a una función no va a crear múltiples instancias.
