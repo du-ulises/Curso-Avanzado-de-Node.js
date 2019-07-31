@@ -34,3 +34,9 @@ exit
 
 npm i debug --save
 
+Cómo hacer Mocks y Stubs con Sinon
+Vamos a crear unos servicios que van a utilizar unos modelos, y estos son los que se van a conectar a la base de datos. Sequelize se encarga de probar los modelos.
+
+npm install --save-dev sinon
+
+npm install proxyquire --save-dev
