@@ -4,20 +4,21 @@ const debug = require('debug')('platziverse:db:setup')
 const inquirer = require('inquirer')
 const chalk = require('chalk')
 const db = require('./')
+const argv = require('yargs').boolean('y').argv
 
 const prompt = inquirer.createPromptModule()
 
-async function setup () {
-  const answer = await prompt([
-    {
+async function setup() {
+  const ops = argv.y
+  if (!ops) {
+    const answer = await prompt({
       type: 'confirm',
       name: 'setup',
-      message: 'This will destroy your database, are you sure?'
+      massage: 'This will destroy your DataBase, Are you Sure?'
+    })
+    if (!answer.setup || ops) {
+      returnconsole.log('Nothing happened :)')
     }
-  ])
-
-  if (!answer.setup) {
-    return console.log('Nothing happened :)')
   }
 
   const config = {
@@ -36,7 +37,7 @@ async function setup () {
   process.exit(0)
 }
 
-function handleFatalError (err) {
+function handleFatalError(err) {
   console.error(`${chalk.red('[Fatal error]')} ${err.message}`)
   console.error(err.stack)
   process.exit(1)

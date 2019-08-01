@@ -55,3 +55,10 @@ El servicio Agent lo que hace es reportar unas métricas cada cierto tiempo. Par
 - create: Que va a recibir dos parámetros: el ID del agente y la métrica.
 - findByAgentUuis: En el que vamos a hacer una consulta que va a buscar todas las métricas cuyo AgentId es igual al
 - findByTypeAgentUuid: Que va a buscar por tipo de métrica y por AgentId.
+
+Reto: Cómo modificar el script de inicialización de la base de datos
+Nosotros creamos un script de la configuración de la base de datos. Este script lo vamos a querer ejecutar de forma automatizada. Más adelante cuando estemos haciendo deploy ese script no lo va a ejecutar un humano.
+
+Reto #2:
+Modificar el script de creación de base de datos para que evite el prompt de confirmación pasándole un flag --yes al script.
+npm run setup -- -y
