@@ -48,3 +48,10 @@ Para implementar las pruebas de las funciones se definen unos argumentos que se 
 
 sinon.createSandbox() <- sinon.sandbox.create()
 sinon.resetHistory() <- sinon.sandbox.restore()
+
+Implementación del servicio Metric
+El servicio Agent lo que hace es reportar unas métricas cada cierto tiempo. Para implementar el servicio Metric vamos a necesitar tres funciones asíncronas:
+
+- create: Que va a recibir dos parámetros: el ID del agente y la métrica.
+- findByAgentUuis: En el que vamos a hacer una consulta que va a buscar todas las métricas cuyo AgentId es igual al
+- findByTypeAgentUuid: Que va a buscar por tipo de métrica y por AgentId.
