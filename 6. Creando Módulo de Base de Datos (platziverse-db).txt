@@ -40,3 +40,11 @@ Vamos a crear unos servicios que van a utilizar unos modelos, y estos son los qu
 npm install --save-dev sinon
 
 npm install proxyquire --save-dev
+
+Revisión del servicio Agent
+Ya aprendimos a implementar pruebas unitarias. Ahora haremos la revisión de las funciones que implementamos para entender cómo se creó el servicio completo.
+
+Para implementar las pruebas de las funciones se definen unos argumentos que se reutilizan para trabajar con nuestros stubs, y creamos unas nuevas también.
+
+sinon.createSandbox() <- sinon.sandbox.create()
+sinon.resetHistory() <- sinon.sandbox.restore()
