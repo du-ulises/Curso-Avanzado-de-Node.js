@@ -1,0 +1,4 @@
+Definición de un Broker de Mensajería
+Platziverse MQTT va a ser el servidor encargado de recibir los mensajes de los agentes de monitoreo y re-distribuírlos a los agentes que estarán “escuchando” o a la espera de esos mensajes.
+
+Un “message broker” es decir un intermediario que se encargará de recibir un mensaje y redistribuírlo para esto nosotros vamos a implementar el protocolo MQTT para que realice esta función en nuestro servidor por las ventajas que este ofrece al estar optimizado para aplicaciones de IoT este protocolo “máquina a máquina” utiliza un ancho de banda muy bajo y puede funcionar con conexiones móviles y situaciones de ese estilo dónde el ancho de banda es limitado en muchas ocaciones y el consumo de datos debe ser lo más bajo posible.
