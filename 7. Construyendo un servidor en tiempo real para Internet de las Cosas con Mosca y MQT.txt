@@ -50,3 +50,15 @@ Después de notificar que el agente se conectó exitosamente vamos a almacenar l
 ¿Cómo identificar cuando alguien se desconecta?
 
 Tenemos un evento que se llama clientDisconnected. Ahí vamos a obtener un agente del mapa. Cuando el cliente se desconecta vamos a ver si tenemos un agente, si lo tenemos lo podemos marcar como desconectado y almacenarlo en la base de datos.
+
+Probando el servidor MQTT (Ejemplo con mqtt client)
+Ahora vamos a probar que efectivamente nuestra información se esté guardando en la base de datos. El servidor MQTT es el encargo de enviar el agentConnected y agentDisconnected. Vamos a enviar un agentMessage y el mensaje que vamos a enviar será un objeto JSON con la información del agente y la información de las métricas. Un objeto y un arreglo, respectivamente.
+
+Reto #4:
+Actualmente las métricas se almacenan en serie en la base de datos, refactorizar para que se almacenen en paralelo.
+
+mqtt pub -t 'agent/message' -m '{"agent": {"uuid": "yyy", "name": "platzi", "username": "platzi", "pid": 10, "hostname": "platzibogota"}, "metrics": [{"type": "memory", "value": "1001"}, {"type": "temp", "value": "33"}]}'
+
+psql -h localhost -U platzi platziverse
+
+con q saltas (END)
