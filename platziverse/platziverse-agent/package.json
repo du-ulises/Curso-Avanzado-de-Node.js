@@ -5,12 +5,15 @@
   "description": "A Simple IoT Platform - Agent",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Diego-Ulises/Curso-Avanzado-de-Node.js/platziverse"
   },
   "author": "Diego Ulises Martínez Aguilar",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^13.1.0"
+  }
 }
