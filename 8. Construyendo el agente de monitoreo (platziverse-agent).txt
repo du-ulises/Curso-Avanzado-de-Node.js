@@ -1,0 +1,6 @@
+Cómo implementar un custom EventEmitter usando ES6 classes
+El agent va a ser el encargado de notificar al servidor cada una de las métricas que vamos a definir, y va a ser el módulo que vamos a utilizar para recibir la información, o para suscribirnos a los mensajes que están enviando todos los que están conectados a la aplicación.
+
+Este módulo lo vamos a desarrollar como un EventEmitter. En esta clase vamos a aprender cómo crear uno personalizado, utilizando ES6.
+
+El módulo de Node que nos permite crear EventEmitters está dentro del paquete events, que viene en el core de Node, así que no hay que instalar nada más. Para esto vamos a crear una clase que vamos a extender del EventEmitter, y luego la vamos a exportar. Cuando vayamos a utilizar el módulo podemos exportar esta clase. El constructor de la clase va a recibir opciones, que inicialmente vamos a obviar. Lo último será llamar al constructor de la clase de EventEmitter.
