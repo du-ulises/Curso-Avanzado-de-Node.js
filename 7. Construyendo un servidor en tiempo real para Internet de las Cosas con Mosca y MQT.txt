@@ -36,3 +36,10 @@ Reto #3:
 ¿Ves un patrón aquí? - El módulo de configuración se reutiliza del script de configuración de la base de datos, puedes volverlo un módulo standalone? cómo lo llamarías?
 
 npm i
+
+Cómo almacenar la información del agente y reportar el agente conectado
+Para implementar la persistencia de los mensajes en la base de datos necesitamos tener una referencia de todos los agentes que tenemos conectados. Tenemos que crear un mapa de JavaScript.
+Cada vez que un cliente se conecte vamos a capturar el ID y la información del agente. Por ahora no conocemos la información porque no hemos recibido el primer mensaje, así que más adelante le vamos a setear la información.
+
+Después vamos a empezar a trabajar con los mensajes que publican en nuestro servidor. Para eso vamos a optener el topic y hacer un switch.
+El switch es una estructura de control de JS que permite ejecutar un código.
