@@ -9,3 +9,12 @@ Antes de empezar con la implementación de nuestro servidor de MQTT debemos defi
 Crearemos un archivo readme en nuestra carpeta “platziverse-mqtt.”
 
 Vamos a utilizar un eventoopara cuando el usuario se conecte para esto utilizamos “agent/connected” además utilizaremos “agent/disconnected” para cuando el agente se deconecte y por último un evento para cuando nos envíen un mensaje “agent/message”.
+
+Implementación del servidor MQTT
+Vamos a comenzar con la implementación de nuestro servidor de MQTT.
+
+Por defecto el puerto donde va a correr el servidor MQTT es el 8083.
+
+npm init
+npm i --save-dev standard nodemon
+npm i --save debug mosca redis chalk
