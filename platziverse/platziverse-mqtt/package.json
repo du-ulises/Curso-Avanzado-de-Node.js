@@ -23,6 +23,7 @@
     "chalk": "^2.4.2",
     "debug": "^4.1.1",
     "mosca": "^2.8.3",
+    "platziverse-db": "file:../platziverse-db",
     "redis": "^2.8.0"
   }
 }

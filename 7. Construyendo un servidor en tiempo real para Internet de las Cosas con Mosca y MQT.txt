@@ -28,3 +28,11 @@ npx mqtt -v
 
 En otra terminal: 
     mqtt pub -t 'agent/message' -h localhost -m 'Hello'
+
+Cómo integrar el servidor MQTT con la base de datos
+Hay muchas formas de publicar nuestro módulo. En este caso vamos a referenciarlo como un módulo local.
+
+Reto #3:
+¿Ves un patrón aquí? - El módulo de configuración se reutiliza del script de configuración de la base de datos, puedes volverlo un módulo standalone? cómo lo llamarías?
+
+npm i
