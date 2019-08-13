@@ -43,3 +43,10 @@ Cada vez que un cliente se conecte vamos a capturar el ID y la información del 
 
 Después vamos a empezar a trabajar con los mensajes que publican en nuestro servidor. Para eso vamos a optener el topic y hacer un switch.
 El switch es una estructura de control de JS que permite ejecutar un código.
+
+Cómo almacenar la información de las métricas
+Después de notificar que el agente se conectó exitosamente vamos a almacenar las métricas. Para esto, recordemos que estamos recibiendo un arreglo que contiene las métricas, y vamos a iterar sobre ese arreglo, para obtener cada uno de los objetos que contiene.
+
+¿Cómo identificar cuando alguien se desconecta?
+
+Tenemos un evento que se llama clientDisconnected. Ahí vamos a obtener un agente del mapa. Cuando el cliente se desconecta vamos a ver si tenemos un agente, si lo tenemos lo podemos marcar como desconectado y almacenarlo en la base de datos.
