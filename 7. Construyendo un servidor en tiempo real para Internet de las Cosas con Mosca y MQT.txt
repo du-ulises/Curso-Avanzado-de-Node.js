@@ -18,3 +18,13 @@ Por defecto el puerto donde va a correr el servidor MQTT es el 8083.
 npm init
 npm i --save-dev standard nodemon
 npm i --save debug mosca redis chalk
+npm run start-dev
+
+Cómo recibir mensajes
+Ya tenemos implementado el servidor, pero hasta ahora no sabemos cómo recibir mensajes, ya sea cuando un cliente se conecta, o cuando hay un mensaje.
+
+npm install -g mqtt
+npx mqtt -v
+
+En otra terminal: 
+    mqtt pub -t 'agent/message' -h localhost -m 'Hello'
