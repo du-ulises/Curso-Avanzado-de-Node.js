@@ -16,3 +16,8 @@ TERMINAL
     http http://localhost:3000/api/metrics/yyy-yyy/memory
 
 Implementación de manejo de errores con express
+Pruebas básicas de Integración con Ava y supertest
+npm install --save-dev ava supertest
+https://github.com/visionmedia/supertest
+
+Pruebas básicas de Integración con Ava y supertest
