@@ -14,3 +14,5 @@ apt-get install httpie
 TERMINAL
     http http://localhost:3000/api/agents
     http http://localhost:3000/api/metrics/yyy-yyy/memory
+
+Implementación de manejo de errores con express
