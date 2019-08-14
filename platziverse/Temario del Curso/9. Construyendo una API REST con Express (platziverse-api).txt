@@ -21,3 +21,8 @@ npm install --save-dev ava supertest
 https://github.com/visionmedia/supertest
 
 Pruebas básicas de Integración con Ava y supertest
+
+Integración con el módulo de base de datos
+npm install -S ../platziverse-db
+npm install express-asyncify --save
+
