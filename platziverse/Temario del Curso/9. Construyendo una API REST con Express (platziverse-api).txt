@@ -6,3 +6,11 @@ npm i chalk --save
 It appears that my max ports weren't configured correctly. I ran the following code and it worked...
 
 echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+Definición de rutas del API
+https://httpie.org/ HTTPie—aitch-tee-tee-pie—is a command line HTTP client with an intuitive UI, JSON support, syntax highlighting, wget-like downloads, plugins, and more.
+apt-get install httpie
+
+TERMINAL
+    http http://localhost:3000/api/agents
+    http http://localhost:3000/api/metrics/yyy-yyy/memory
