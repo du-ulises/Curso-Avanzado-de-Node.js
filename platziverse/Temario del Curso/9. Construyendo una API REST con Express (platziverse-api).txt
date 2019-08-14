@@ -1,0 +1,8 @@
+Implementación de un servidor básico con express
+npm i standard nodemon --save-dev
+npm install express debug --save
+npm i chalk --save
+
+It appears that my max ports weren't configured correctly. I ran the following code and it worked...
+
+echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
