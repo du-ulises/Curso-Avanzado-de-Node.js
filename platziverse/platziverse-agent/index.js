@@ -56,27 +56,27 @@ class PLatziverseAgent extends EventEmitter {
 
         this._timer = setInterval(async () => {
           if (this._metrics.size > 0) {
-            let message = {
-                agent: {
-                    uuid: this._agentId,
-                    username: opts.username,
-                    name: opts.name,
-                    hostname: os.hostname() || 'localhost',
-                    pid: process.pid
-                },
-                metrics: [],
-                timestamp: new Date().getTime()
+            const message = {
+              agent: {
+                uuid: this._agentId,
+                username: opts.username,
+                name: opts.name,
+                hostname: os.hostname() || 'localhost',
+                pid: process.pid
+              },
+              metrics: [],
+              timestamp: new Date().getTime()
             }
           }
 
-          for (let [ metric, fn ] of this._metrics) {
+          for (let [metric, fn] of this._metrics) {
             if (fn.length == 1) {
-                fn = util.promisify(fn)
+              fn = util.promisify(fn)
             }
 
             message.metrics.push({
-                type: metric,
-                value: await Promise.resolve(fn())
+              type: metric,
+              value: await Promise.resolve(fn())
             })
           }
 
@@ -84,7 +84,6 @@ class PLatziverseAgent extends EventEmitter {
 
           this._client.publish('agent/message', JSON.stringify(message))
           this.emit('message', message)
-
         }, opts.interval)
       })
 
@@ -93,11 +92,11 @@ class PLatziverseAgent extends EventEmitter {
 
         let broadcast = false
         switch (topic) {
-            case 'agent/connected':
-            case 'agent/disconnected':
-            case 'agent/message':
-              broadcast = payload && payload.agent && payload.agent.uuid !==  this._agentId
-              break
+          case 'agent/connected':
+          case 'agent/disconnected':
+          case 'agent/message':
+            broadcast = payload && payload.agent && payload.agent.uuid !== this._agentId
+            break
         }
 
         if (broadcast) {
