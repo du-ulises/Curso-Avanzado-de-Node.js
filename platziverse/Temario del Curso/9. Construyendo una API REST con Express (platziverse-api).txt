@@ -26,3 +26,5 @@ Integración con el módulo de base de datos
 npm install -S ../platziverse-db
 npm install express-asyncify --save
 
+Implementación de ruta del API
+Los middleware en express reciben tres parámetros que son el request, el response y next, lo que hace next es pasar el response al siguiente middleware para que siga el proceso de la petición hecha a la url o endpoint. Te dejo el enlace de la documentación oficial https://expressjs.com/en/guide/using-middleware.html
