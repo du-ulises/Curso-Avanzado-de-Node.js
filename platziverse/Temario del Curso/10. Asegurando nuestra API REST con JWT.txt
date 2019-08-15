@@ -1,0 +1,8 @@
+Definición de JWT
+Reto:
+¿Cómo asegurar el resto de rutas del API?
+¿Cómo harán para probar los dos casos, éste y el reto anterior?
+
+para convertir el token a string en node uso:
+
+Buffer.from(unToken, 'base64').toString()
