@@ -28,3 +28,8 @@ npm install express-asyncify --save
 
 Implementación de ruta del API
 Los middleware en express reciben tres parámetros que son el request, el response y next, lo que hace next es pasar el response al siguiente middleware para que siga el proceso de la petición hecha a la url o endpoint. Te dejo el enlace de la documentación oficial https://expressjs.com/en/guide/using-middleware.html
+
+Pruebas de Integración con Ava, Supertest y Sinon
+¿Ves un patrón aquí? - El módulo de fixtures se reusa del proyecto platziverse-db ¿Puedes volverlo un módulo standalone? ¿Cómo lo llamarías? / ¿Puedes terminar de implementar el resto de pruebas del API?
+
+npm install sinon proxyquire --save-dev
