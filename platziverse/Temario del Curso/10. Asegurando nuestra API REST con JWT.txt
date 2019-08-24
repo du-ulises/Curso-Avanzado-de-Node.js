@@ -6,3 +6,17 @@ Reto:
 para convertir el token a string en node uso:
 
 Buffer.from(unToken, 'base64').toString()
+
+Asegurando nuestra API con express-jwt
+npm install jsonwebtoken --save
+
+$ node
+> var auth = require('./auth')
+> auth.sign({ username: 'platzi' }, 'platzi', console.log)
+> auth.verify('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRpZWdvIFVsaXNlcyIsImlhdCI6MTU2NjY4ODY4Mn0.F_Y-TqxDWHXIjKlK8lAGWICOmlQiijiiRPtQ6Dd1qIs')
+
+npm install express-jwt --save
+
+curl -v http://localhost:3000/api/agents
+curl -v -H 'Authorization: Bearer <token>' http://localhost:3000/api/agents
+curl -v -H 'Authorization: Bearer <token>' http://localhost:3000/api/agents | jq
