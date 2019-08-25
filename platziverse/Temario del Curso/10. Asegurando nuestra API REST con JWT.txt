@@ -20,3 +20,9 @@ npm install express-jwt --save
 curl -v http://localhost:3000/api/agents
 curl -v -H 'Authorization: Bearer <token>' http://localhost:3000/api/agents
 curl -v -H 'Authorization: Bearer <token>' http://localhost:3000/api/agents | jq
+
+Implementando permisos con express-jwt-permissions
+npm install express-jwt-permissions --save
+
+auth.sign({'username': 'platzi', 'permissions': [ 'metrics:read' ]}, 'platzi', console.log)
+'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBsYXR6aSIsInBlcm1pc3Npb25zIjpbIm1ldHJpY3M6cmVhZCJdLCJpYXQiOjE1NjY2OTI2MTJ9.yidaE2ia8qXD_vJ_IagLbzE3-czUer9PYkmJIx2t5yY'
