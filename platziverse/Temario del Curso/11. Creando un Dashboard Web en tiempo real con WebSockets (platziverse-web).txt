@@ -2,3 +2,6 @@ Implementación de un servidor web estático con express
 npm init
 npm i standard nodemon --save-dev
 npm install express debug chalk --save
+
+Integrando socket.io con express
+npm install socket.io --save
