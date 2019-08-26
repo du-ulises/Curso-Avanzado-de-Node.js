@@ -19,7 +19,7 @@ const options = {
   }
 }
 
-class PLatziverseAgent extends EventEmitter {
+class PlatziverseAgent extends EventEmitter {
   constructor (opts) {
     super()
 
@@ -56,7 +56,7 @@ class PLatziverseAgent extends EventEmitter {
 
         this._timer = setInterval(async () => {
           if (this._metrics.size > 0) {
-            const message = {
+            let message = {
               agent: {
                 uuid: this._agentId,
                 username: opts.username,
@@ -67,23 +67,23 @@ class PLatziverseAgent extends EventEmitter {
               metrics: [],
               timestamp: new Date().getTime()
             }
-          }
 
-          for (let [metric, fn] of this._metrics) {
-            if (fn.length == 1) {
-              fn = util.promisify(fn)
+            for (let [ metric, fn ] of this._metrics) {
+              if (fn.length === 1) {
+                fn = util.promisify(fn)
+              }
+
+              message.metrics.push({
+                type: metric,
+                value: await Promise.resolve(fn())
+              })
             }
 
-            message.metrics.push({
-              type: metric,
-              value: await Promise.resolve(fn())
-            })
+            debug('Sending', message)
+
+            this._client.publish('agent/message', JSON.stringify(message))
+            this.emit('message', message)
           }
-
-          debug('Sending', message)
-
-          this._client.publish('agent/message', JSON.stringify(message))
-          this.emit('message', message)
         }, opts.interval)
       })
 
@@ -118,4 +118,4 @@ class PLatziverseAgent extends EventEmitter {
   }
 }
 
-module.exports = PLatziverseAgent
+module.exports = PlatziverseAgent
