@@ -15,3 +15,7 @@ platziverse-api$ node
 > auth.sign({ username: 'platzi', admin: true, permissions: ['metrics:read'] }, 'platzi', console.log)
 undefined
 > null 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBsYXR6aSIsImFkbWluIjp0cnVlLCJwZXJtaXNzaW9ucyI6WyJtZXRyaWNzOnJlYWQiXSwiaWF0IjoxNTY2ODc5NDU5fQ.icZNba2nyEzwPocLx4Q29p9gwtJYL8xxcQdo_erfxaM'
+
+Presentación de nuestro cliente frontend en Vue.js
+npm install chart.js --save
+npm install -D babel-core
