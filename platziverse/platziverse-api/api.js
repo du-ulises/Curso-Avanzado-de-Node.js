@@ -33,15 +33,15 @@ api.get('/agents', auth(config.auth), async (req, res, next) => {
 
   const { user } = req
 
-  if(!user || !user.username) {
+  if (!user || !user.username) {
     return next(new Error('Not authorized'))
   }
 
   let agents = []
   try {
-    if(user.admin){
+    if (user.admin) {
       agents = await Agent.findConnected()
-    }else{
+    } else {
       agents = await Agent.findByUsername(user.username)
     }
   } catch (e) {
