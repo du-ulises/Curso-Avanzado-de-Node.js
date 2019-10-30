@@ -33,6 +33,6 @@
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
     "requirer": "0.0.4",
-    "sequelize": "^5.10.1"
+    "sequelize": "^5.15.1"
   }
 }
